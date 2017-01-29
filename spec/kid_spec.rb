@@ -2,7 +2,7 @@ describe 'Kid' do
   let(:kid) {Kid.new("Pat")}
 
   it 'includes the Dance module' do
-    expect(kid).to have_instance_dance_methods
+    expect(kid).to be_a_kind_of(Dance)
   end
 
   it 'has a name' do
@@ -10,6 +10,6 @@ describe 'Kid' do
   end
 
   it 'extends the MetaDancing module' do
-    expect(Kid).to have_class_dance_methods
+    expect(Kid).to be_a_kind_of(MetaDancing)
   end
 end
